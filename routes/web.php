@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Title;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('titles', [
+        'titles' => Title::all()
+    ]);
+});
+
+Route::get('title/{title:slug}', function (Title $title) {
+    return view('title', [
+        'title' => $title
+    ]);
 });

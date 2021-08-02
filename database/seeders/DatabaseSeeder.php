@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use Database\Factories\TitleFactory;
 use Illuminate\Database\Seeder;
+use App\Models\Title;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +15,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        Title::factory(10)->create();
     }
 }
