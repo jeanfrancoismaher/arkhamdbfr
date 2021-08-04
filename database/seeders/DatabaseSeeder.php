@@ -2,9 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
+use App\Models\Title;
+use App\Models\Set;
 use Database\Factories\TitleFactory;
 use Illuminate\Database\Seeder;
-use App\Models\Title;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,5 +18,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Title::factory(10)->create();
+        Category::factory(5)->create();
+        Set::factory(3)->create();
     }
 }

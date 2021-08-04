@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use App\Models\Title;
+use App\Models\Category;
+use App\Models\Set;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TitleFactory extends Factory
@@ -22,6 +24,10 @@ class TitleFactory extends Factory
     public function definition()
     {
         return [
+            'category_id' => Category::factory(),
+            'set_id' => Set::factory(),
+            'img_mini' => "core_mini.png",
+            'img_big' => "core_big.png",
             'name' => $this->faker->name(),
             'year_published' => now(),
             'slug' => $this->faker->slug(),
