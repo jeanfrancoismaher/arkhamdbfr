@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSetsTable extends Migration
+class CreateCampaignsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateSetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sets', function (Blueprint $table) {
+        Schema::create('campaigns', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('slug');
@@ -28,6 +28,6 @@ class CreateSetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sets');
+        Schema::dropIfExists('campaigns');
     }
 }

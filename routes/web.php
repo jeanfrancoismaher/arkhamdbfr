@@ -2,7 +2,7 @@
 
 use App\Models\Title;
 use App\Models\Category;
-use App\Models\Set;
+use App\Models\Campaign;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,9 +36,9 @@ Route::get('category/{category:slug}', function (Category $category) {
     ]);
 });
 
-Route::get('set/{set:slug}', function (Set $set) {
+Route::get('campaign/{campaign:slug}', function (Campaign $campaign) {
     return view('titles', [
-        'titles' => $set->titles,
+        'titles' => $campaign->titles,
         'categories' => Category::all()
     ]);
 });

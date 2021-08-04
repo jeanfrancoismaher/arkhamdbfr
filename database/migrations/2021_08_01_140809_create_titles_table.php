@@ -17,8 +17,8 @@ class CreateTitlesTable extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->foreignId('category_id');
-            $table->foreignId('set_id');
-            $table->date('year_published');
+            $table->foreignId('campaign_id');
+            $table->integer('year_published');
             $table->text('slug');
             $table->string('img_mini');
             $table->string('img_big');

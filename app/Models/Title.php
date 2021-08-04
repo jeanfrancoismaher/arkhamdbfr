@@ -24,10 +24,15 @@ class Title extends Model
 
     protected $guarded = [];
 
-    protected $with = (['category']);
+    protected $with = (['category','campaign']);
 
     public function category() 
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function campaign() 
+    {
+        return $this->belongsTo(Campaign::class);
     }
 }

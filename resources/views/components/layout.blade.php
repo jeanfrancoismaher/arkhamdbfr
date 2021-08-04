@@ -8,10 +8,10 @@
 
 <body style="font-family: Open Sans, sans-serif">
     <section class="px-6 py-8">
-        <nav class="md:justify-between md:items-center md:object-center">
+        <nav class="max-w-xl mx-auto mt-20 text-center">
             <div>
                 <a href="/">
-                    <img src="/images/arkham-logo.jpeg" alt="Arkham Horror Logo" width="165" height="16">
+                    <img src="/images/arkham-logo.jpeg" alt="Arkham Horror Logo" width="165" height="16" class="inline">
                 </a>
             </div>
         </nav>

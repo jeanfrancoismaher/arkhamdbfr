@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Title;
 use App\Models\Category;
-use App\Models\Set;
+use App\Models\Campaign;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TitleFactory extends Factory
@@ -25,11 +25,11 @@ class TitleFactory extends Factory
     {
         return [
             'category_id' => Category::factory(),
-            'set_id' => Set::factory(),
+            'campaign_id' => Campaign::factory(),
             'img_mini' => "core_mini.png",
             'img_big' => "core_big.png",
             'name' => $this->faker->name(),
-            'year_published' => now(),
+            'year_published' => $this->faker->year(),
             'slug' => $this->faker->slug(),
         ];
     }

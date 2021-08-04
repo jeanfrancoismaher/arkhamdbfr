@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Set;
+use App\Models\Campaign;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class SetFactory extends Factory
+class CampaignFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Set::class;
+    protected $model = Campaign::class;
 
     /**
      * Define the model's default state.
