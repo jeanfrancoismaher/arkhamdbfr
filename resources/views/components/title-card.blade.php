@@ -4,9 +4,8 @@
     $classes = "transition-colors duration-300 hover:bg-gray-100 border border-black border-opacity-0 hover:border-opacity-5 rounded-xl col-span-6";
 @endphp
 
-<article
-    {{ $attributes->merge(['class' => $classes])}}>
-    <div class="py-6 px-5  max-w-xl">
+<article {{ $attributes->merge(['class' => $classes])}}>
+    <div class="py-6 px-5 max-w-xl">
         <div class="flex-1 lg:mr-8">
             <img src="/images/{{ $title->img_mini }}" alt="Title illustration" class="rounded-xl w-1/4">
         </div>
